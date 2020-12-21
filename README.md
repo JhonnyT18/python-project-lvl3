@@ -8,4 +8,4 @@
 [![Test Coverage](https://api.codeclimate.com/v1/badges/0de54e58e9203fb01a4a/test_coverage)](https://codeclimate.com/github/JhonnyT18/python-project-lvl3/test_coverage)
 
 ### Examples:
- https://asciinema.org/a/FwnldfshfJGdNGHd5Il7ugs5g
+[![asciicast](https://asciinema.org/a/FwnldfshfJGdNGHd5Il7ugs5g.svg)](https://asciinema.org/a/FwnldfshfJGdNGHd5Il7ugs5g)
