@@ -3,7 +3,7 @@ name = "hexlet_code"
 version = "0.1.0"
 description = ""
 authors = ["Evgenii T"]
-repository = "https://github.com/JhonnyT18/python-project-lvl2"
+repository = "https://github.com/JhonnyT18/python-project-lvl3"
 packages = [
   { include = "page_loader" },
 ]
@@ -11,12 +11,14 @@ packages = [
 [tool.poetry.dependencies]
 python = "^3.8"
 requests = "^2.25.1"
+bs4 = "^0.0.1"
 
 [tool.poetry.dev-dependencies]
 flake8 = "^3.8.4"
 pytest = "^6.2.1"
 coverage = "^5.3.1"
 pytest-cov = "^2.10.1"
+requests_mock = "^1.8.0"
 
 [tool.poetry.scripts]
 page-loader = 'page_loader.scripts.page_loader:main'

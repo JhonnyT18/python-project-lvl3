@@ -1,26 +1,19 @@
 # _*_ coding: utf-8 _*_
 import requests
 import os
-from urllib.parse import urlparse
-
-
-def get_files_name(url):
-    parts = urlparse(url)
-    parsed_url = parts.netloc + parts.path + parts.params + parts.fragment
-    files_name = ''
-    for i in parsed_url:
-        if i.isalpha():
-            files_name += i
-        else:
-            files_name += '-'
-    files_name += '.html'
-    return files_name
+from page_loader.links import get_res
+from page_loader.files import write_to_file
+from page_loader.resources import download_resources
+from page_loader.names import get_files_name
 
 
 def download(url, path_for_download=os.getcwd()):
-    files_name = get_files_name(url)
-    result_path = os.path.join(path_for_download, files_name)
+    path_to_file = os.path.join(path_for_download, get_files_name(url))
     r = requests.get(url)
-    with open(result_path, 'w') as file:
-        file.write(r.text)
-    return result_path
+    dir_for_download = os.path.splitext(path_to_file)[0] + '_files'
+    resources, page = get_res(url, r.text, dir_for_download)
+    write_to_file(page, path_to_file)
+    os.mkdir(dir_for_download)
+    if resources:
+        download_resources(resources)
+    return path_to_file
