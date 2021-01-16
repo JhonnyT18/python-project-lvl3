@@ -8,5 +8,5 @@
 [![Test Coverage](https://api.codeclimate.com/v1/badges/0de54e58e9203fb01a4a/test_coverage)](https://codeclimate.com/github/JhonnyT18/python-project-lvl3/test_coverage)
 
 ### Examples:
-*#It's downloading page and pics:*
-[![asciicast](https://asciinema.org/a/Pemcx4IORauBupbnjhiYrB9eb.svg)](https://asciinema.org/a/Pemcx4IORauBupbnjhiYrB9eb)
+*#It's downloading page with local resources:*
+[![asciicast](https://asciinema.org/a/rkE3JTAS734iT9zIXulGtFQ52.svg)](https://asciinema.org/a/rkE3JTAS734iT9zIXulGtFQ52)
