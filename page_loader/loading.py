@@ -14,6 +14,8 @@ set_logging()
 
 def download(url, path_for_download=os.getcwd()):
     path_to_file = os.path.join(path_for_download, get_files_name(url))
+    if os.path.exists(path_to_file):
+        raise OSError("File already exists.")
     r = requests.get(url)
     dir_for_download = os.path.splitext(path_to_file)[0] + '_files'
     resources, page = get_res(url, r.text, dir_for_download)
