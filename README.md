@@ -2,7 +2,7 @@
 
 [![Actions Status](https://github.com/JhonnyT18/python-project-lvl3/workflows/hexlet-check/badge.svg)](https://github.com/JhonnyT18/python-project-lvl3/actions)    
 
-###Page loader    
+### Page loader
 
 ![Check the project](https://github.com/JhonnyT18/python-project-lvl3/workflows/Check%20the%20project/badge.svg)
 
