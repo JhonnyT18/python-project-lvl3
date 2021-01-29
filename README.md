@@ -10,8 +10,8 @@
 
 [![Test Coverage](https://api.codeclimate.com/v1/badges/0de54e58e9203fb01a4a/test_coverage)](https://codeclimate.com/github/JhonnyT18/python-project-lvl3/test_coverage)
 
-**Command line utility for downloading pages from Internet.**
-###Usage:    
+**Command line utility for downloading pages from Internet.**    
+### Usage:    
 page-loader [-h] [-o OUTPUT] url
 
 positional arguments:
