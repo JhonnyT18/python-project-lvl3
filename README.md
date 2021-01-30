@@ -10,7 +10,7 @@ ____
 
 [![Test Coverage](https://api.codeclimate.com/v1/badges/0de54e58e9203fb01a4a/test_coverage)](https://codeclimate.com/github/JhonnyT18/python-project-lvl3/test_coverage)
 ____    
-**Command line utility for downloading pages from Internet.**    
+**Command line utility for downloading pages from Internet. It can download any page with resources from Internet and puts the materials into specified directory on your PC.**    
 ### Usage:    
 page-loader [-h] [-o OUTPUT] url
 
