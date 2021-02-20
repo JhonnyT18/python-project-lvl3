@@ -1,6 +1,6 @@
 # _*_ coding: utf-8 _*_
 import pytest
-from page_loader.loading import get_files_name
+from page_loader.loading import to_file_name
 
 
 cases = [
@@ -21,6 +21,6 @@ cases = [
 
 @pytest.mark.parametrize('url, expected', cases)
 def test_get_files_name(url, expected):
-    assert get_files_name(url) == expected
+    assert to_file_name(url) == expected
 
 
