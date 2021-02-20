@@ -2,7 +2,7 @@ import sys
 from urllib.parse import urljoin
 import os
 import tempfile
-from page_loader.loading import download
+from page_loader import loading
 import requests_mock
 
 
@@ -25,7 +25,7 @@ def test_download():
             m.get(RESOURCES_LINK[0], text=RESOURCES_LINK[0])
             m.get(RESOURCES_LINK[1], text=RESOURCES_LINK[1])
             m.get(RESOURCES_LINK[2], text=RESOURCES_LINK[2])
-            file_path = download(URL, tmpdirname)
+            file_path = loading.download(URL, tmpdirname)
             with open(file_path, 'r') as file:
                 page = file.read()
             assert page == expected_page
