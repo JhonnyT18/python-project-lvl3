@@ -1,7 +1,7 @@
 import pytest
 import tempfile
 import requests_mock
-from page_loader.loading import download
+from page_loader import download
 import os
 from page_loader.errors import SomethingWrongError
 

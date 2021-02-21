@@ -1,6 +1,6 @@
 # _*_ coding: utf-8 _*_
 import pytest
-from page_loader.loading import to_file_name
+from page_loader.url import to_file_name
 
 
 cases = [

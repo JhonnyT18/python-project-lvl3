@@ -2,9 +2,9 @@
 # _*_ coding: utf-8 _*_
 import sys
 from page_loader.cli import get_parser
-from page_loader import loading
+from page_loader import download
 import logging
-from page_loader.logging import setup
+from page_loader.logging_ import setup
 from page_loader.errors import SomethingWrongError
 
 
@@ -14,7 +14,7 @@ def main():
     parser = get_parser()
     args = parser.parse_args()
     try:
-        path_to_downloaded = loading.download(args.url, args.output)
+        path_to_downloaded = download(args.url, args.output)
         logging.info('Downloading is finished.')
     except SomethingWrongError as er:
         logging.error(f"{er}")
