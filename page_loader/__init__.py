@@ -2,7 +2,7 @@ import os
 import logging
 import requests
 from page_loader.url import to_file_name
-from page_loader.errors import SomethingWrongError
+from page_loader.errors import SomethingWrongError, LoadingError
 from page_loader.links import get_res_links
 from page_loader.storage import save
 from page_loader.resources import download_resources
@@ -16,9 +16,8 @@ def download(url, path_for_download=os.getcwd()):
         r = requests.get(url)
         r.raise_for_status()
     except requests.exceptions.HTTPError as er:
-        raise SomethingWrongError(f'Something'
-                                  f'went wrong during downloading '
-                                  f'the page!\n{er}') from er
+        raise LoadingError(f"The page wasn't "
+                           f"loaded!\n{er}") from er
     except PermissionError as er:
         raise SomethingWrongError(f"Not enough rights for access\n{er}")
     dir_for_download = os.path.splitext(path_to_file)[0] + '_files'
